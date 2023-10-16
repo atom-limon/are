@@ -3,7 +3,6 @@ package com.example.are
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.are.databinding.ActivityMainBinding
 import com.example.are.databinding.ActivityRegisterBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
@@ -21,7 +20,7 @@ class Register : AppCompatActivity() {
             dbauth.createUserWithEmailAndPassword(binding.etEmail.text.toString().trim(),binding.etPassword.text.toString())
                 .addOnCompleteListener {
                     if(it.isSuccessful){
-                        var intent: Intent = Intent(this,MainActivity::class.java)
+                        var intent: Intent = Intent(this,Login::class.java)
                         startActivity(intent)
                     }
                 }
