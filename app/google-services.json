@@ -1,0 +1,49 @@
+{
+  "project_info": {
+    "project_number": "156597351980",
+    "firebase_url": "https://fir-learn-d0e00-default-rtdb.firebaseio.com",
+    "project_id": "fir-learn-d0e00",
+    "storage_bucket": "fir-learn-d0e00.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:156597351980:android:448d9a41b8912a88a30389",
+        "android_client_info": {
+          "package_name": "com.example.are"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAYp8PXmTto3B29FMSNAAhARHwtDXsYxew"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:156597351980:android:36385253533b97a8a30389",
+        "android_client_info": {
+          "package_name": "com.example.whatsappml"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAYp8PXmTto3B29FMSNAAhARHwtDXsYxew"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
