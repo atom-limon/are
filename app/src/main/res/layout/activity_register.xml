@@ -1,43 +1,133 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Register">
+    android:padding="16dp"
+    android:background="#CCB9ED"
+    tools:context=".Register"
+    android:fillViewport="true"
+    >
 
-    <androidx.appcompat.widget.AppCompatEditText
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/etEmail"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:hint="email"
-        app:layout_constraintVertical_bias=".2"
-        />
-    <androidx.appcompat.widget.AppCompatEditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/etPassword"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:hint="pass"
-        app:layout_constraintVertical_bias=".3"
-        />
+        android:layout_height="match_parent">
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/btnSignup"
-        android:text="Sign up"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        />
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="0dp"
+            android:layout_height="250dp"
+            android:src="@drawable/arelogoreg"
+            android:id="@+id/logoreg"
+            app:layout_constraintDimensionRatio="w,1:1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="16dp"
+            />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/logoreg"
+            app:layout_constraintVertical_bias=".1">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/etusername"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="@drawable/custominput"
+                android:drawableStart="@drawable/baseline_person_outline_24"
+                android:drawablePadding="10dp"
+                android:hint="Username"
+                android:paddingStart="10dp"
+                android:textSize="19sp"
+                android:textColor="#6A1212"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/etEmail"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="@drawable/custominput"
+                android:drawableStart="@drawable/twotone_email_24"
+                android:drawablePadding="10dp"
+                android:hint="Email"
+                android:paddingStart="10dp"
+                android:textSize="19sp"
+                android:textColor="#6A1212"
+                app:layout_constraintBottom_toTopOf="@id/etPassword"
+                app:layout_constraintEnd_toEndOf="@+id/etusername"
+                app:layout_constraintStart_toStartOf="@+id/etusername"
+                app:layout_constraintTop_toBottomOf="@id/etusername"
+                app:layout_constraintVertical_bias=".75" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/etPassword"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="@drawable/custominput"
+                android:drawableStart="@drawable/twotone_lock_24"
+                android:drawablePadding="8dp"
+                android:hint="Password"
+                android:paddingStart="10dp"
+                android:textSize="19sp"
+                android:inputType="textPassword"
+                app:layout_constraintEnd_toEndOf="@+id/etEmail"
+                app:layout_constraintStart_toStartOf="@+id/etEmail"
+                app:layout_constraintTop_toBottomOf="@id/etEmail" />
+
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/already"
+            android:text="Already Have Account?"
+            android:textColor="#1C34BD"
+            android:textSize="17sp"
+            app:layout_constraintStart_toStartOf="@id/linearLayout"
+            app:layout_constraintEnd_toEndOf="@id/linearLayout"
+            app:layout_constraintTop_toBottomOf="@id/linearLayout"
+            app:layout_constraintBottom_toTopOf="@id/btnSignup"
+            android:layout_marginTop="16dp"
+            app:fontFamily="@font/alfa_slab_one"
+            />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnSignup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sign up"
+            android:textAllCaps="false"
+            android:fontFamily="@font/alfa_slab_one"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/custominput"
+            app:layout_constraintTop_toBottomOf="@+id/already"
+            app:layout_constraintEnd_toEndOf="@id/already"
+            app:layout_constraintStart_toStartOf="@id/already"
+            />
+
+        <ProgressBar
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:id="@+id/pbarreg"
+            app:layout_constraintStart_toStartOf="@id/btnSignup"
+            app:layout_constraintEnd_toEndOf="@id/btnSignup"
+            app:layout_constraintTop_toTopOf="@id/btnSignup"
+            app:layout_constraintBottom_toBottomOf="@id/btnSignup"
+            android:progressTint="#456F8F"
+            android:visibility="invisible"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
